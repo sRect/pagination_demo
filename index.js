@@ -75,6 +75,22 @@ const insertFn = () => { // 插入记录
   })
 }
 
+const update = () => {
+  return new Promise((resolve, reject) => {
+    db.update('login', {
+      "id": "哈哈哈"
+    }, {
+      $set: { "id": "hello" }
+    }, function (err, result) {
+      if (err) {
+        console.log(err)
+        return;
+      }
+      resolve(result)
+    })
+  })
+}
+
 const render = () => { // 读取首页
   return new Promise((resolve, reject) => {
     fs.readFile('./index.html', 'utf-8', (err, data) => {
@@ -116,6 +132,10 @@ router.post('/index', async (ctx, next) => { // post请求
     "data": await getResourse(search, limit, skip),
     "count": await getCount(search)
   }
+})
+
+router.post("/update", async (ctx, next) => { 
+  ctx.response.body = await update();
 })
 
 app.use(router.routes())

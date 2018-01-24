@@ -2,6 +2,7 @@ $(function () {
   let subBtn = document.querySelector('#subBtn');
   let search = document.querySelector('#search');
   let tbody = document.querySelector('#tbody');
+  let updateBtn = document.querySelector("#updateBtn");
 
 
   const render = arr => { // render
@@ -80,4 +81,19 @@ $(function () {
   }, 300, { 'maxWait': 1000 }), false)
 
   getData('', 0)
+
+  updateBtn.addEventListener("click",_.debounce(function() {
+    console.log("enter2");
+    $.post("http://192.168.1.77:3000/update",function(result) {
+      console.log(result);
+      if (result.n === 1 && result.nModified === 1) {
+        $(".alert-success").fadeIn("fast").delay("3000").fadeOut("slow");
+      }else {
+        $(".alert-warning").fadeIn("fast").delay("3000").fadeOut("slow");
+      }
+    })
+
+  }, 300, { 'maxWait': 1000 }), false)
+
+
 })

@@ -64,3 +64,18 @@ exports.insert = (collectionName, insertObj, callback) => {
     })
   })
 }
+
+// 改
+exports.update = (collectionName, insertObj1, insertObj2, callback) => {
+  _connectMongoDB(config.urlInsert, (err, db) => {
+    db.collection(collectionName).updateOne(insertObj1, insertObj2, (err, result) => {
+      if (err) {
+        throw new Error("修改数据失败:" + err)
+        return;
+      }
+      console.log('修改数据成功')
+      callback(err, result)
+      db.close()
+    })
+  }) 
+}
