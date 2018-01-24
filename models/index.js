@@ -79,3 +79,18 @@ exports.update = (collectionName, insertObj1, insertObj2, callback) => {
     })
   }) 
 }
+
+// 删
+exports.remove = (collectionName, removeObj, callback) => {
+  _connectMongoDB(config.urlInsert, (err, db) => {
+    db.collection(collectionName).deleteOne(removeObj, (err, result) => {
+      if (err) {
+        throw new Error("删除数据失败:" + err)
+        return;
+      }
+      console.log('删除数据成功')
+      callback(err, result)
+      db.close()
+    })
+  })
+}

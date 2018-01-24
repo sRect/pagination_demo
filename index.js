@@ -91,6 +91,20 @@ const update = () => {
   })
 }
 
+const remove = (id) => {
+  return new Promise((resolve, reject) => {
+    db.remove("login", {
+      "id": id
+    }, function(err, result) {
+      if (err) {
+        console.log(err)
+        return;
+      }
+      resolve(result)
+    })
+  })
+}
+
 const render = () => { // 读取首页
   return new Promise((resolve, reject) => {
     fs.readFile('./index.html', 'utf-8', (err, data) => {
@@ -114,8 +128,6 @@ router.get('/home', async (ctx, next) => { // get请求
 })
 
 router.post('/index', async (ctx, next) => { // post请求
-  // insertFn();
-  
   ctx.response.type = "json";
   let data = ctx.request.body,
     search = '',
@@ -136,6 +148,12 @@ router.post('/index', async (ctx, next) => { // post请求
 
 router.post("/update", async (ctx, next) => { 
   ctx.response.body = await update();
+})
+
+router.post("/remove", async (ctx, next) => {
+  let id = ctx.request.body.id;
+  console.log("随机删除id:"+ id)
+  ctx.response.body = await remove(id);
 })
 
 app.use(router.routes())

@@ -3,6 +3,7 @@ $(function () {
   let search = document.querySelector('#search');
   let tbody = document.querySelector('#tbody');
   let updateBtn = document.querySelector("#updateBtn");
+  let removeBtn = document.querySelector("#removeBtn");
 
 
   const render = arr => { // render
@@ -92,8 +93,19 @@ $(function () {
         $(".alert-warning").fadeIn("fast").delay("3000").fadeOut("slow");
       }
     })
-
   }, 300, { 'maxWait': 1000 }), false)
-
-
+// removeBtn
+  removeBtn.addEventListener("click", _.debounce(function () {
+    console.log("enter2");
+    $.post("http://192.168.1.77:3000/remove",{
+      "id": parseInt(Math.random() * 100 + 10)
+    }, function (result) {
+      console.log(result);
+      if (result.n === 1) {
+        $(".alert-success").fadeIn("fast").delay("3000").fadeOut("slow");
+      } else {
+        $(".alert-warning").fadeIn("fast").delay("3000").fadeOut("slow");
+      }
+    })
+  }, 300, { 'maxWait': 1000 }), false)
 })
