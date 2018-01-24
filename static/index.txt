@@ -1,0 +1,96 @@
+[{
+  "_id" : ObjectId("5a600aff82ea6f20689cae12"),
+  "quiz" : "俗话说「哑巴吃黄连——」的下一句是？",
+  "school" : "生活",
+  "type" : "常识",
+  "contributor" : "",
+  "endTime" : "1516243746",
+  "curTime" : "1516243731",
+  "answer" : 2,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:31.115Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:31.115Z")
+  },
+  "options" : ["有心无力", "有苦说不出", "路人皆知", "有理说不清"],
+  "__v" : 0
+},
+{
+  "_id" : ObjectId("5a600aff82ea6f20689cae13"),
+  "quiz" : "战国时期为了孩子的教育问题而三次迁移住址的是哪位名人的母亲？",
+  "school" : "文艺",
+  "type" : "文化",
+  "contributor" : "",
+  "endTime" : "1516243746",
+  "curTime" : "1516243731",
+  "answer" : 2,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:31.75Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:31.75Z")
+  },
+  "options" : ["韩非子", "孟子", "荀子", "老子"],
+  "__v" : 0
+},
+{
+  "_id" : ObjectId("5a600b0082ea6f20689cae14"),
+  "quiz" : "被誉为「孤篇压全唐」的唐诗是？",
+  "school" : "文科",
+  "type" : "语文",
+  "contributor" : "小卒",
+  "endTime" : "1516243747",
+  "curTime" : "1516243732",
+  "answer" : 1,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:32.359Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:32.359Z")
+  },
+  "options" : ["春江花月夜", "蜀道难", "梦游天姥吟留别", "卖炭翁"],
+  "__v" : 0
+},
+{
+  "_id" : ObjectId("5a600b0082ea6f20689cae15"),
+  "quiz" : "清代「摊丁入亩」制度是哪位皇帝开始实施的？",
+  "school" : "文科",
+  "type" : "历史",
+  "contributor" : "鸣雀装饰~王延宝～真实",
+  "endTime" : "1516243748",
+  "curTime" : "1516243733",
+  "answer" : 4,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:32.993Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:32.993Z")
+  },
+  "options" : ["康熙", "乾隆", "嘉庆", "雍正"],
+  "__v" : 0
+},
+{
+  "_id" : ObjectId("5a600b0182ea6f20689cae16"),
+  "quiz" : "「知人论事」的观点是谁提出的？",
+  "school" : "文科",
+  "type" : "语文",
+  "contributor" : "安。",
+  "endTime" : "1516243748",
+  "curTime" : "1516243733",
+  "answer" : 4,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:33.57Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:33.57Z")
+  },
+  "options" : ["孔子", "庄子", "墨子", "孟子"],
+  "__v" : 0
+},
+{
+  "_id" : ObjectId("5a600b0482ea6f20689cae17"),
+  "quiz" : "贝多芬钢琴曲《a小调巴加泰勒》又名什么？",
+  "school" : "文艺",
+  "type" : "演艺",
+  "contributor" : "",
+  "endTime" : "1516243751",
+  "curTime" : "1516243736",
+  "answer" : 3,
+  "meta" : {
+    "updatedAt" : ISODate("2018-01-18T02:48:36.413Z"),
+    "createdAt" : ISODate("2018-01-18T02:48:36.413Z")
+  },
+  "options" : ["暴风雨", "月光曲", "致爱丽丝", "悲怆"],
+  "__v" : 0
+}]

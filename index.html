@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>头脑王者</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./static/pagenate/page.css">
+  <style>
+    .pageTest{ width: 1000px; height: 50px; margin-top: 100px;    }
+    .activP{
+      background-color: #367fa9!important;
+      color: #fff!important;
+    }
+  </style>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="container page-header">
+    <h1>头脑王者
+      <small>go!</small>
+      
+    </h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-md-10 col-lg-10 col-sm-10 ">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="number" class="col-xs-2 col-sm-2 col-md-2 col-xs-offset-6 col-md-offset-6 col-sm-offset-6 control-label">搜索查询</label>
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <input type="text" class="form-control" id="search" placeholder="请输入查询">
+            </div>  
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-2 col-md-2 col-lg-2 col-sm-2 text-right">
+        <button id="subBtn" type="button" class="btn btn-primary">　　提 交 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>　</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="text-center">序号</th>
+            <th class="text-center">题名</th>
+            <th class="text-center">选项</th>
+            <th class="text-center">学科</th>
+            <th class="text-center">类别</th>
+            <th class="text-center">贡献者</th>
+            <th class="text-center">答案</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="container text-right">
+    <div id="pager"></div>
+  </div>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="./static/pagenate/page.js"></script>
+  <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+
+  <script src="./static/index.js"></script>
+</body>
+
+</html>
